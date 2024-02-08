@@ -38,12 +38,12 @@
         </button>
       </div>
     </div>
-    <footer
+    <!-- <footer
       id="create-new"
       class="fixed bottom-2 z-10 right-4 text-white text-xs cursor-pointer bg-blue-600 p-2"
     >
       Tạo link xin lì xì
-    </footer>
+    </footer> -->
   </body>
   <script
     src="https://code.jquery.com/jquery-3.4.1.js"
@@ -146,7 +146,7 @@
         width: 600,
         padding: "3em",
         html: `<div>STK đây nha:</div><div>${bank ?? ""}</div><div>${
-          stk ?? "191407253 VP Bank"
+          stk ?? '<img src="./qr.jpeg" alt="" class="h-[300px] mx-auto">'
         }</div>`,
         imageUrl: "cheems-3.png",
         imageWidth: 200,
