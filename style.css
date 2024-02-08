@@ -1,8 +1,10 @@
 .wrapper {
   background-image: url("bg.png");
   position: relative;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center; /* Căn chỉnh hình nền vào giữa */
   background-repeat: no-repeat;
+  position: relative;
 }
 
 #no {
@@ -25,4 +27,36 @@
 
 .hide {
   display: none;
+}
+
+
+/* Điều chỉnh giao diện cho điện thoại di động */
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+  #no {
+    position: absolute; /* Sử dụng vị trí tuyệt đối */
+    display: block;
+    width: 6em; /* Đặt kích thước chiều rộng của nút */
+    height: 3em; /* Đặt kích thước chiều cao của nút */
+    padding: 10px; /* Đặt kích thước lề cố định */
+    text-align: center; /* Căn văn bản trong nút vào giữa */
+    left: 25%; /* Đặt nút không đồng ý sang trái 25% so với lề trái */
+    transform: translateX(-50%); /* Dịch chuyển nút sang trái 50% kích thước của nó để căn giữa */
+    bottom: 20px; /* Đặt nút không đồng ý ở dưới cùng */
+    background-color: #FFD700; /* Màu nền của nút không đồng ý */
+  }
+  #yes {
+    position: absolute; /* Sử dụng vị trí tuyệt đối */
+    display: block;
+    width: 6em; /* Đặt kích thước chiều rộng của nút */
+    height: 3em; /* Đặt kích thước chiều cao của nút */
+    padding: 10px; /* Đặt kích thước lề cố định */
+    text-align: center; /* Căn văn bản trong nút vào giữa */
+    left: 75%; /* Đặt nút đồng ý sang phải 75% so với lề trái */
+    transform: translateX(-50%); /* Dịch chuyển nút sang trái 50% kích thước của nó để căn giữa */
+    bottom: 20px; /* Đặt nút đồng ý ở dưới cùng */
+    background-color: #3498db; /* Màu nền của nút đồng ý */
+  }
 }
